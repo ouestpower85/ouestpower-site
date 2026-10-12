@@ -1,16 +1,15 @@
-OUESTPOWER — SITE INTERNET
+OU ESTPOWER — SITE WEB
 
-Fichiers :
-- index.html : page du site
-- style.css : design responsive
-- script.js : menu, galerie filtrable et sélecteur de marques/modèles
-- assets/ : photos originales des réalisations envoyées
+Publication : téléverser le contenu du dossier dans le dépôt GitHub Pages, en conservant le dossier assets.
 
-Publication GitHub Pages :
-1. Décompressez le ZIP.
-2. Dans le dépôt GitHub du site, ajoutez/remplacez index.html, style.css et script.js.
-3. Importez aussi le dossier assets avec ses six photos.
-4. Validez les modifications (Commit changes).
-5. Attendez la mise à jour de GitHub Pages puis rechargez le site.
+Modifier les photos simplement :
+- Photo principale et réalisation BMW Série 5 E60 : remplacer assets/bmw-serie-5-e60.jpg par la nouvelle photo en gardant exactement ce nom.
+- Renault Master : assets/renault-master.jpg
+- Citroën C1 : assets/citroen-c1.jpg
+- Renault Captur : assets/renault-captur-09-tce.jpg
+- Renault Trafic : assets/renault-trafic-2.jpg
+- Camping-car : assets/camping-car-ford-tdci.jpg
 
-Le sélecteur contient un large catalogue de marques et de gammes de modèles. Les motorisations exactes ne sont pas exhaustives et aucune puissance Stage 1 n'est inventée : les estimations doivent être confirmées pour chaque version.
+Pour une nouvelle photo BMW, garder le nom bmw-serie-5-e60.jpg évite de modifier le code HTML.
+Les estimations de puissance Stage 1 sont des fourchettes générales indicatives, pas une garantie. Toujours vérifier la motorisation exacte et l'état mécanique avant toute annonce client.
+Contacts : 06 59 20 91 42 — ouestpower85@gmail.com — Instagram @ouestpower.

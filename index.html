@@ -84,18 +84,20 @@
         <form class="vehicle-form" id="vehicle-form">
           <label for="brand">Marque</label><select id="brand" required><option value="">Choisir une marque</option></select>
           <label for="model">Modèle / gamme</label><select id="model" required disabled><option value="">Choisir d'abord une marque</option></select>
-          <label for="engine">Motorisation / informations</label><input id="engine" placeholder="Ex. 2.0 TDI 150, année 2018" required>
+          <label for="engine">Motorisation / informations (facultatif)</label><input id="engine" placeholder="Ex. 2.0 TDI, année 2018">
+          <label for="fuel-type">Type de moteur (pour une estimation indicative)</label><select id="fuel-type"><option value="">Je ne sais pas / autre</option><option value="diesel-turbo">Diesel turbo</option><option value="essence-turbo">Essence turbo</option><option value="atmospherique">Essence atmosphérique</option></select>
+          <label for="original-power">Puissance d’origine en ch (facultatif)</label><input id="original-power" type="number" min="1" max="2000" placeholder="Ex. 150">
           <label for="service">Prestation recherchée</label><select id="service" required><option value="Stage 1">Reprogrammation moteur / Stage 1</option><option value="FlexFuel E85">Conversion FlexFuel E85</option><option value="Diagnostic">Diagnostic / étude de faisabilité</option></select>
-          <div class="estimate-result" id="estimate-result">Choisissez une marque et indiquez votre motorisation pour préparer votre demande.</div>
+          <div class="estimate-result" id="estimate-result">Choisissez une marque et un modèle. La motorisation est facultative. Saisissez la puissance d’origine pour afficher une fourchette indicative.</div>
           <button class="button button-primary full" type="submit">Préparer ma demande ↗</button>
           <p class="form-help">Le bouton ouvre votre application de messagerie avec les informations saisies. Aucun formulaire n'est envoyé automatiquement.</p>
         </form>
       </div>
     </section>
 
-    <section class="contact-section" id="contact"><div><p class="eyebrow">VOTRE PROJET COMMENCE ICI</p><h2>Parlons de votre <em>véhicule.</em></h2><p>Envoyez la marque, le modèle, l'année et la motorisation pour une première étude de faisabilité.</p></div><div class="contact-actions"><a class="button button-primary" href="https://www.instagram.com/ouestpower/" target="_blank" rel="noopener">Instagram : @ouestpower ↗</a><a class="button button-ghost" href="#estimateur">Préparer une demande</a><p class="contact-detail">Pour une réponse rapide, envoyez un message privé sur Instagram avec la marque, le modèle, l’année et la motorisation.</p></div></section>
+    <section class="contact-section" id="contact"><div><p class="eyebrow">VOTRE PROJET COMMENCE ICI</p><h2>Parlons de votre <em>véhicule.</em></h2><p>Envoyez la marque, le modèle, l'année et la motorisation pour une première étude de faisabilité.</p></div><div class="contact-actions"><a class="button button-primary" href="https://www.instagram.com/ouestpower/" target="_blank" rel="noopener">Instagram : @ouestpower ↗</a><a class="button button-ghost" href="#estimateur">Préparer une demande</a><p class="contact-detail"><strong>Téléphone :</strong> <a href="tel:0659209142">06 59 20 91 42</a><br><strong>E-mail :</strong> <a href="mailto:ouestpower85@gmail.com">ouestpower85@gmail.com</a><br>Pour une réponse rapide, appelez-nous ou envoyez un message sur Instagram.</p></div></section>
   </main>
-  <footer class="footer"><div class="footer-contact"><strong>CONTACT OUESTPOWER</strong><a href="https://www.instagram.com/ouestpower/" target="_blank" rel="noopener">Instagram : @ouestpower ↗</a></div><a class="brand" href="#accueil"><span class="brand-mark">O<span>P</span></span><span class="brand-name">OUEST<span>POWER</span><small>REPROGRAMMATION AUTOMOBILE</small></span></a><p>© <span id="year"></span> Ouestpower — Reprogrammation moteur & FlexFuel.</p><a href="#accueil">Retour en haut ↑</a></footer>
+  <footer class="footer"><div class="footer-contact"><strong>CONTACT OUESTPOWER</strong><a href="tel:0659209142">06 59 20 91 42</a><a href="mailto:ouestpower85@gmail.com">ouestpower85@gmail.com</a><a href="https://www.instagram.com/ouestpower/" target="_blank" rel="noopener">Instagram : @ouestpower ↗</a></div><a class="brand" href="#accueil"><span class="brand-mark">O<span>P</span></span><span class="brand-name">OUEST<span>POWER</span><small>REPROGRAMMATION AUTOMOBILE</small></span></a><p>© <span id="year"></span> Ouestpower — Reprogrammation moteur & FlexFuel.</p><a href="#accueil">Retour en haut ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
