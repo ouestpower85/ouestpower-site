@@ -1,19 +1,13 @@
-OUESTPOWER — SITE INTERNET COMPLET
+OUESTPOWER — SITE COMPLET POUR GITHUB PAGES
 
-Contenu :
-- index.html : page principale du site
-- style.css : design responsive sombre et orange
-- script.js : menu mobile et formulaire de demande de devis
-- assets/citroen-c1.jpg : photo fournie, utilisée à la place des anciennes photos
+Contenu : index.html, style.css, script.js et dossier assets avec les photos.
+La BMW M2 violette est configurée comme photo d’accueil (assets/bmw-m2.jpg). Elle n’est pas ajoutée à la galerie Réalisations. Les autres photos et sections du site sont conservées.
 
-Publication GitHub Pages :
-1. Décompressez le ZIP sur votre ordinateur.
-2. Dans le dépôt GitHub ouestpower-site, téléversez index.html, style.css, script.js et le dossier assets (avec le fichier citroen-c1.jpg).
-3. Remplacez les anciens fichiers quand GitHub le demande.
-4. Cliquez sur Commit changes.
-5. Attendez quelques minutes puis actualisez https://ouestpower85.github.io/ouestpower-site/
+POUR METTRE À JOUR LE SITE GITHUB
+1. Téléchargez ce ZIP puis décompressez-le sur votre ordinateur.
+2. Dans GitHub, ouvrez le dépôt ouestpower-site.
+3. Pour éviter de mélanger les anciennes versions, téléversez les fichiers du dossier décompressé en conservant la structure : index.html, style.css, script.js et le dossier assets avec toutes ses photos.
+4. Cliquez sur Commit changes pour enregistrer.
+5. Attendez quelques minutes puis actualisez https://ouestpower85.github.io/ouestpower-site/ avec Ctrl+F5.
 
-Important :
-- Le formulaire prépare un message et propose de le copier puis d'ouvrir Instagram ; il n'envoie pas automatiquement de message.
-- Les prix affichés sont « à partir de 450 € ».
-- Vérifiez et complétez les mentions légales, coordonnées, conditions et informations réglementaires avant une utilisation commerciale.
+Important : ne téléversez pas seulement le ZIP dans GitHub ; il faut téléverser son contenu décompressé. Ne supprimez pas le dossier assets : il contient toutes les images utilisées par le site.
