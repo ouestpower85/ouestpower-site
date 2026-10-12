@@ -12,7 +12,9 @@ $("#calculate").addEventListener("click",()=>{
  else if(fuel==="diesel"){low=.15;high=.30}
  else{low=.15;high=.25}
  const min=Math.round(p*(1+low)/5)*5,max=Math.round(p*(1+high)/5)*5;
- out.innerHTML=`<span>FOURCHETTE THÉORIQUE APRÈS STAGE 1</span><b>${min} à ${max} ch environ</b><p>Soit un ordre de grandeur de +${Math.round(p*low)} à +${Math.round(p*high)} ch à partir de ${p} ch d'origine. À confirmer pour le modèle exact.</p>`;
+ const gainMin=Math.round(p*low),gainMax=Math.round(p*high);
+ const torqueText = fuel === "diesel" ? "environ +15 à +30 % de couple" : (engine === "atmo" || fuel === "atmo" ? "environ +2 à +5 % de couple" : "environ +10 à +25 % de couple");
+ out.innerHTML=`<span>FOURCHETTE THÉORIQUE APRÈS STAGE 1</span><b>${min} à ${max} ch environ</b><p><strong>Gain estimé : +${gainMin} à +${gainMax} ch</strong> à partir de ${p} ch d'origine.</p><p><strong>Couple :</strong> ${torqueText}, selon le moteur et la cartographie.</p><p>À confirmer pour la marque, le modèle et la motorisation exacts après étude. Ce calcul reste indicatif.</p>`;
 });
 $("#request-form").addEventListener("submit",e=>{
  e.preventDefault();const f=new FormData(e.currentTarget);
