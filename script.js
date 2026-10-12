@@ -1,0 +1,95 @@
+const brandModels = {
+  "Abarth":["124 Spider","500","595","695","Grande Punto"],
+  "Acura":["ILX","Integra","MDX","NSX","RDX","TLX"],
+  "Alfa Romeo":["145","147","156","159","Giulia","Giulietta","MiTo","Stelvio","Tonale"],
+  "Alpine":["A110","A290","A310"],
+  "Aston Martin":["Cygnet","DB7","DB9","DB11","DB12","DBS","Rapide","Vantage","Vanquish","DBX"],
+  "Audi":["A1","A3","A4","A5","A6","A7","A8","Q2","Q3","Q4 e-tron","Q5","Q7","Q8","TT","R8","S3","S4","S5","S6","S7","S8","RS3","RS4","RS5","RS6","RS7","RS Q3","RS Q8","e-tron GT"],
+  "Bentley":["Bentayga","Continental GT","Flying Spur","Mulsanne"],
+  "BMW":["Série 1","Série 2","Série 3","Série 4","Série 5","Série 6","Série 7","Série 8","X1","X2","X3","X4","X5","X6","X7","Z3","Z4","i3","i4","i5","i7","iX","M2","M3","M4","M5","M8","X3 M","X5 M"],
+  "BYD":["Atto 3","Dolphin","Han","Seal","Seal U","Tang"],
+  "Cadillac":["ATS","CT4","CT5","CTS","Escalade","Lyriq","XT4","XT5","XT6"],
+  "Chery":["Tiggo 4","Tiggo 7","Tiggo 8"],
+  "Chevrolet":["Aveo","Camaro","Captiva","Corvette","Cruze","Malibu","Orlando","Spark","Trax"],
+  "Chrysler":["300C","Crossfire","Grand Voyager","PT Cruiser","Voyager"],
+  "Citroën":["Ami","Berlingo","C1","C2","C3","C3 Aircross","C3 Picasso","C4","C4 Cactus","C4 Picasso / SpaceTourer","C5","C5 Aircross","C5 X","C6","C8","Jumpy","Jumper","Nemo","Saxo","SpaceTourer","Xsara"],
+  "Cupra":["Ateca","Born","Formentor","Leon","Tavascan","Terramar"],
+  "Dacia":["Dokker","Duster","Jogger","Lodgy","Logan","Sandero","Spring"],
+  "Daewoo":["Kalos","Lacetti","Matiz","Nubira"],
+  "Daihatsu":["Copen","Cuore","Materia","Sirion","Terios"],
+  "Dodge":["Avenger","Caliber","Challenger","Charger","Durango","Journey","RAM"],
+  "DS Automobiles":["DS 3","DS 3 Crossback","DS 4","DS 4S","DS 5","DS 7","DS 7 Crossback","DS 9"],
+  "Ferrari":["296 GTB","458 Italia","488 GTB","812 Superfast","California","F8 Tributo","Portofino","Roma","SF90 Stradale"],
+  "Fiat":["500","500L","500X","Bravo","Croma","Doblo","Ducato","Grande Punto","Panda","Punto","Tipo"],
+  "Ford":["B-Max","C-Max","EcoSport","Edge","Escape","Explorer","Fiesta","Focus","Galaxy","Ka","Kuga","Mondeo","Mustang","Puma","Ranger","S-Max","Tourneo Connect","Tourneo Custom","Transit","Transit Connect","Transit Custom"],
+  "Genesis":["G70","G80","G90","GV60","GV70","GV80"],
+  "GMC":["Acadia","Canyon","Sierra","Terrain","Yukon"],
+  "Honda":["Accord","Civic","CR-V","CR-Z","e","HR-V","Jazz","NSX","Prelude","ZR-V"],
+  "Hummer":["H1","H2","H3","EV"],
+  "Hyundai":["Accent","Bayon","Coupe","i10","i20","i30","i40","Ioniq","Ioniq 5","Ioniq 6","Kona","Santa Fe","Tucson","Veloster"],
+  "Infiniti":["EX","FX","G","Q30","Q50","QX30","QX50","QX70"],
+  "Isuzu":["D-Max","MU-X","Trooper"],
+  "Iveco":["Daily","Eurocargo"],
+  "Jaguar":["E-Pace","F-Pace","F-Type","I-Pace","S-Type","XE","XF","XJ","XK"],
+  "Jeep":["Avenger","Cherokee","Compass","Gladiator","Grand Cherokee","Renegade","Wrangler"],
+  "Kia":["Carens","Ceed","EV3","EV6","EV9","Niro","Optima","Picanto","ProCeed","Rio","Sorento","Soul","Sportage","Stinger","Stonic","Venga","XCeed"],
+  "Lamborghini":["Aventador","Gallardo","Huracán","Revuelto","Urus"],
+  "Lancia":["Delta","Musa","Thema","Ypsilon"],
+  "Land Rover":["Defender","Discovery","Discovery Sport","Freelander","Range Rover","Range Rover Evoque","Range Rover Sport","Range Rover Velar"],
+  "Lexus":["CT","ES","GS","IS","LC","LS","NX","RC","RX","RZ","UX"],
+  "Lincoln":["Aviator","Continental","Corsair","MKC","MKZ","Navigator"],
+  "Lotus":["Elise","Emira","Eletre","Evora","Exige"],
+  "Lucid":["Air","Gravity"],
+  "Mahindra":["KUV100","Scorpio","Thar","XUV500"],
+  "Maserati":["Ghibli","GranCabrio","GranTurismo","Grecale","Levante","MC20","Quattroporte"],
+  "Maxus":["Deliver 9","eDeliver 3","eDeliver 9","MIFA 9","T90 EV"],
+  "Mazda":["2","3","5","6","CX-3","CX-30","CX-5","CX-60","CX-7","CX-80","MX-5","MX-30","RX-8"],
+  "McLaren":["540C","570S","600LT","650S","720S","750S","Artura","GT","P1"],
+  "Mercedes-Benz":["Classe A","Classe B","Classe C","Classe CLA","Classe CLK","Classe CLS","Classe E","Classe G","Classe GL","Classe GLA","Classe GLB","Classe GLC","Classe GLE","Classe GLS","Classe S","Classe SL","Classe SLC","Classe V","Classe X","AMG GT","AMG A 35","AMG A 45","AMG C 43","AMG C 63","AMG E 53","AMG E 63","AMG G 63","EQA","EQB","EQC","EQE","EQS","Sprinter","Vito"],
+  "MG":["3","4","5","Cyberster","HS","Marvel R","ZS"],
+  "MINI":["Cabrio","Clubman","Countryman","Coupe","Mini 3 portes","Mini 5 portes","Paceman"],
+  "Mitsubishi":["ASX","Colt","Eclipse Cross","L200","Lancer","Outlander","Pajero","Space Star"],
+  "Nissan":["370Z","Almera","Ariya","Juke","Leaf","Micra","Murano","Navara","Note","NV200","Pathfinder","Qashqai","X-Trail","Z"],
+  "Opel":["Adam","Agila","Ampera","Astra","Combo","Corsa","Crossland","Grandland","Insignia","Karl","Meriva","Mokka","Movano","Vivaro","Zafira"],
+  "Peugeot":["107","108","2008","206","207","208","3008","301","307","308","4007","4008","407","408","5008","508","607","807","Bipper","Boxer","Expert","Partner","Rifter","Traveller"],
+  "Polestar":["1","2","3","4"],
+  "Pontiac":["Firebird","GTO","Solstice","Trans Am"],
+  "Porsche":["718 Boxster","718 Cayman","911","918 Spyder","Cayenne","Macan","Panamera","Taycan"],
+  "RAM":["1500","2500","3500","ProMaster"],
+  "Renault":["Arkana","Austral","Captur","Clio","Espace","Fluence","Grand Scénic","Kadjar","Kangoo","Koleos","Laguna","Master","Mégane","Modus","Rafale","Scénic","Symbol","Talisman","Trafic","Twingo","Twizy","Zoe"],
+  "Rivian":["R1S","R1T"],
+  "Rolls-Royce":["Cullinan","Dawn","Ghost","Phantom","Spectre","Wraith"],
+  "Saab":["9-3","9-5","900","9000"],
+  "Seat":["Alhambra","Altea","Arona","Ateca","Ibiza","Leon","Mii","Tarraco","Toledo"],
+  "Seres":["3","5","7"],
+  "Škoda":["Citigo","Enyaq","Fabia","Kamiq","Karoq","Kodiaq","Octavia","Rapid","Roomster","Scala","Superb","Yeti"],
+  "Smart":["#1","#3","ForFour","ForTwo","Roadster"],
+  "SsangYong / KGM":["Korando","Musso","Rexton","Tivoli","Torres","XLV"],
+  "Subaru":["BRZ","Forester","Impreza","Legacy","Levorg","Outback","Solterra","WRX","XV"],
+  "Suzuki":["Across","Alto","Baleno","Celerio","Ignis","Jimny","S-Cross","Swift","SX4","Vitara"],
+  "Tata":["Harrier","Nexon","Safari","Tiago"],
+  "Tesla":["Model 3","Model S","Model X","Model Y","Cybertruck"],
+  "Toyota":["Auris","Avensis","Aygo","bZ4X","C-HR","Camry","Corolla","GT86","GR86","GR Supra","Highlander","Hilux","Land Cruiser","Prius","Proace","RAV4","Yaris","Yaris Cross"],
+  "VinFast":["VF 6","VF 7","VF 8","VF 9"],
+  "Volkswagen":["Arteon","Beetle","Caddy","California","Crafter","Golf","ID.3","ID.4","ID.5","ID.7","Jetta","Passat","Polo","Scirocco","Sharan","T-Cross","T-Roc","Taigo","Tiguan","Touareg","Touran","Transporter","up!"],
+  "Volvo":["C30","C40","S40","S60","S80","S90","V40","V60","V70","V90","XC40","XC60","XC70","XC90"],
+  "Autre marque / véhicule utilitaire":["Autre modèle","Utilitaire","Camping-car","Véhicule importé","Modèle non listé"]
+};
+const brandSelect=document.querySelector("#brand"), modelSelect=document.querySelector("#model"), engineInput=document.querySelector("#engine"), fuelType=document.querySelector("#fuel-type"), originalPower=document.querySelector("#original-power"), serviceSelect=document.querySelector("#service"), result=document.querySelector("#estimate-result");
+Object.keys(brandModels).sort((a,b)=>a.localeCompare(b,"fr")).forEach(brand=>{const o=document.createElement("option");o.value=brand;o.textContent=brand;brandSelect.appendChild(o)});
+function updateEstimate(){
+  const brand=brandSelect.value, model=modelSelect.value, engine=engineInput.value.trim(), hp=Number(originalPower.value), type=fuelType.value, service=serviceSelect.value;
+  if(!brand||!model){result.textContent="Choisissez une marque et un modèle. La motorisation est facultative.";return;}
+  let msg=`Véhicule : ${brand} ${model}${engine?" — "+engine:""}. Prestation : ${service}.`;
+  if(service==="Stage 1"&&hp>0&&type){let low=0,high=0;if(type==="diesel-turbo"){low=.20;high=.30}else if(type==="essence-turbo"){low=.15;high=.25}else if(type==="atmospherique"){low=.05;high=.10}msg+=` Estimation indicative Stage 1 : environ ${Math.round(hp*(1+low))} à ${Math.round(hp*(1+high))} ch (base déclarée : ${hp} ch).`}
+  else if(service==="Stage 1"){msg+=" Pour afficher une fourchette indicative, renseignez la puissance d’origine et le type de moteur."}
+  if(service==="FlexFuel E85")msg+=" Le passage à l’E85 ne garantit pas de gain de puissance ; la compatibilité doit être vérifiée selon la version exacte.";
+  msg+=" Ces chiffres sont des ordres de grandeur et ne constituent pas une promesse de résultat. Les gains réels dépendent du moteur, de son état et de la calibration.";
+  result.textContent=msg;
+}
+brandSelect.addEventListener("change",()=>{modelSelect.innerHTML='<option value="">Choisir un modèle</option>';(brandModels[brandSelect.value]||[]).forEach(model=>{const o=document.createElement("option");o.value=model;o.textContent=model;modelSelect.appendChild(o)});modelSelect.disabled=!brandSelect.value;updateEstimate()});
+[modelSelect,engineInput,fuelType,originalPower,serviceSelect].forEach(el=>el.addEventListener("change",updateEstimate));engineInput.addEventListener("input",updateEstimate);originalPower.addEventListener("input",updateEstimate);
+document.querySelector("#vehicle-form").addEventListener("submit",e=>{e.preventDefault();const subject=encodeURIComponent("Demande d'étude véhicule - Ouestpower");const body=encodeURIComponent(`Bonjour Ouestpower,\n\nJe souhaite une étude pour mon véhicule :\nMarque : ${brandSelect.value}\nModèle : ${modelSelect.value}\nMotorisation / année : ${engineInput.value}\nType de moteur : ${fuelType.options[fuelType.selectedIndex].text}\nPuissance d’origine : ${originalPower.value?originalPower.value+" ch":"non renseignée"}\nPrestation : ${serviceSelect.value}\n\nPouvez-vous me confirmer la compatibilité et les informations nécessaires ?\n\nCordialement`);window.location.href=`mailto:ouestpower85@gmail.com?subject=${subject}&body=${body}`});
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");document.querySelectorAll(".work-card").forEach(card=>{card.hidden=btn.dataset.filter!=="all"&&card.dataset.category!==btn.dataset.filter})}));
+const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open))});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
+document.querySelector("#year").textContent=new Date().getFullYear();
