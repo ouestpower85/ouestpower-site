@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="Ouestpower — reprogrammation moteur, conversion FlexFuel et diagnostic automobile en Nord Vendée et Loire-Atlantique. Contactez-nous pour un devis.">
+  <title>Ouestpower | Reprogrammation moteur & FlexFuel</title>
+  <style>
+    :root{--bg:#09090b;--panel:#141417;--red:#ff3038;--white:#f7f7f8;--muted:#b6b6bd;--line:#2b2b31}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(9,9,11,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px}
+    .logo{font-weight:950;letter-spacing:1.5px;font-size:1.55rem;font-style:italic}.logo span{color:var(--red)}
+    nav{display:flex;gap:22px;align-items:center;font-size:.94rem} nav a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:5px;background:var(--red);font-weight:800;color:white;border:1px solid var(--red);transition:.2s}
+    .btn:hover{transform:translateY(-2px);background:#e51f29}.btn.ghost{background:transparent;border-color:#777}
+    .hero{position:relative;isolation:isolate;min-height:600px;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(7,7,9,.97) 0%,rgba(7,7,9,.83) 50%,rgba(7,7,9,.28) 100%),url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85') center 55%/cover}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:6px;background:var(--red);z-index:-1}
+    .hero-content{max-width:720px;padding:85px 0}.eyebrow{color:var(--red);font-size:.82rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:.98;margin:16px 0 22px;font-weight:950;letter-spacing:-2px;text-transform:uppercase}h1 span{color:var(--red)}
+    .hero p{font-size:1.12rem;color:#e1e1e5;max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:36px;color:#dedee3;font-size:.9rem}.trust strong{color:white}
+    section{padding:76px 0}.section-head{max-width:700px;margin-bottom:32px}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:10px 0 12px;text-transform:uppercase}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}.card img{display:block;width:100%;height:190px;object-fit:cover;filter:saturate(.85)}.card-body{padding:22px}.card h3{margin:0 0 9px;font-size:1.25rem}.card p{color:var(--muted);margin:0}
+    .band{background:#121215;border-block:1px solid var(--line)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.feature-list{padding:0;list-style:none;display:grid;gap:15px}.feature-list li{display:flex;gap:12px;align-items:flex-start}.tick{color:var(--red);font-weight:900;font-size:1.2rem}
+    .callout{border:1px solid #3a2022;border-left:5px solid var(--red);padding:24px;border-radius:8px;background:#151114}.callout p{color:var(--muted);margin-bottom:0}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.contact-panel{background:var(--panel);border:1px solid var(--line);padding:26px;border-radius:10px}.contact-item{padding:13px 0;border-bottom:1px solid var(--line)}.contact-item:last-child{border:0}.contact-item small{display:block;color:var(--muted);margin-bottom:3px}
+    form{display:grid;gap:13px}label{font-size:.9rem;font-weight:700}input,select,textarea{width:100%;margin-top:6px;background:#09090b;color:white;border:1px solid #38383f;border-radius:5px;padding:12px;font:inherit}textarea{min-height:110px;resize:vertical}.hint{font-size:.8rem;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .mobile-cta{display:none}
+    @media(max-width:780px){nav{gap:12px;font-size:.85rem}nav a:not(.btn){display:none}.hero{min-height:560px;background-position:60% center}.cards,.two-col,.contact-grid{grid-template-columns:1fr}.cards{gap:14px}section{padding:56px 0}.card img{height:210px}.mobile-cta{display:flex;position:fixed;bottom:12px;left:4%;width:92%;z-index:8;box-shadow:0 6px 30px #0009}footer{padding-bottom:86px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#accueil" aria-label="Ouestpower accueil">OUEST<span>POWER</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="#prestations">Prestations</a><a href="#apropos">À propos</a><a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Demander un devis</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="accueil">
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="eyebrow">Performance • Diagnostic • FlexFuel</div>
+        <h1>Réveillez<br>le potentiel<br><span>de votre moteur.</span></h1>
+        <p>Ouestpower vous accompagne pour vos projets de reprogrammation moteur, de conversion FlexFuel et de diagnostic automobile en Nord Vendée et Loire-Atlantique.</p>
+        <div class="actions"><a class="btn" href="#contact">Demander un devis ↗</a><a class="btn ghost" href="tel:+33659209142">Appeler Ouestpower</a></div>
+        <div class="trust"><span>✓ <strong>Échange personnalisé</strong></span><span>✓ <strong>Étude selon le véhicule</strong></span><span>✓ <strong>Nord Vendée & 44</strong></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prestations">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Nos services</div><h2>La solution adaptée<br>à votre véhicule.</h2><p>Chaque véhicule est différent. Parlons de votre motorisation, de votre usage et de votre objectif afin d'étudier la solution appropriée.</p></div>
+      <div class="cards">
+        <article class="card"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80" alt="Mécanicien travaillant dans un atelier automobile"><div class="card-body"><h3>Reprogrammation moteur</h3><p>Étude de votre véhicule et optimisation adaptée à sa configuration, dans le respect des exigences applicables sur route.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1635784063387-7b8e9c9d4d6d?auto=format&fit=crop&w=900&q=80" alt="Détail d'un moteur automobile"><div class="card-body"><h3>Conversion FlexFuel</h3><p>Étude de compatibilité pour un projet de conversion au superéthanol E85 et présentation des solutions possibles.</p></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80" alt="Outils et équipement technique"><div class="card-body"><h3>Diagnostic automobile</h3><p>Lecture des défauts électroniques et accompagnement dans la recherche de panne selon les possibilités d'intervention.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="apropos">
+    <div class="wrap two-col">
+      <div><div class="eyebrow">Pourquoi Ouestpower ?</div><h2>La passion auto.<br>Une approche sérieuse.</h2><p style="color:var(--muted)">Un projet de performance commence par une bonne compréhension du véhicule. Ouestpower privilégie l'échange, l'étude de compatibilité et des informations claires avant toute intervention.</p><div class="actions"><a class="btn" href="#contact">Parler de mon projet</a></div></div>
+      <div class="callout"><h3>Un devis adapté à votre véhicule</h3><p>Indiquez la marque, le modèle, la motorisation, l'année et la prestation recherchée. Nous pourrons échanger sur la faisabilité et les prochaines étapes.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Contact</div><h2>Parlons de votre projet.</h2><p>Contactez Ouestpower par téléphone, par e-mail ou via Instagram. Vous pouvez aussi préparer votre demande avec le formulaire ci-dessous.</p></div>
+      <div class="contact-grid">
+        <div class="contact-panel">
+          <div class="contact-item"><small>Téléphone</small><a href="tel:+33659209142"><strong>06 59 20 91 42</strong></a></div>
+          <div class="contact-item"><small>E-mail</small><a href="mailto:Ouestpower85@gmail.com"><strong>Ouestpower85@gmail.com</strong></a></div>
+          <div class="contact-item"><small>Adresse</small><strong>3103 route de Bouin, 85230 Saint-Gervais</strong></div>
+          <div class="contact-item"><small>Secteur d'intervention</small><strong>Nord Vendée et Loire-Atlantique (44)</strong></div>
+          <div class="actions"><a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn ghost" href="mailto:Ouestpower85@gmail.com?subject=Demande%20de%20devis%20Ouestpower">Envoyer un e-mail</a></div>
+          <p class="hint">Remplacez le lien Instagram générique par l'adresse exacte de votre compte avant publication.</p>
+        </div>
+        <div class="contact-panel">
+          <form id="quoteForm">
+            <label>Votre nom<input name="nom" autocomplete="name" required placeholder="Nom et prénom"></label>
+            <label>Votre téléphone ou e-mail<input name="retour" required placeholder="Comment vous recontacter ?"></label>
+            <label>Véhicule<input name="vehicule" placeholder="Ex. : BMW 330i, année, moteur"></label>
+            <label>Prestation souhaitée<select name="prestation"><option>Reprogrammation moteur</option><option>Conversion FlexFuel E85</option><option>Diagnostic automobile</option><option>Autre demande</option></select></label>
+            <label>Votre demande<textarea name="message" placeholder="Décrivez votre véhicule et votre projet…"></textarea></label>
+            <button class="btn" type="submit">Préparer ma demande par e-mail ↗</button>
+            <p class="hint">Le formulaire ouvre votre application e-mail avec le message prérempli ; il n'envoie rien automatiquement et ne stocke aucune donnée sur ce site.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap callout"><strong>Information importante</strong><p>Les modifications moteur, dispositifs antipollution et conversions de carburant peuvent être soumis à des règles d'homologation, d'assurance et de contrôle technique. La désactivation des systèmes antipollution (FAP, EGR, AdBlue, etc.) peut être interdite sur route. Toute intervention doit être vérifiée au regard de la réglementation applicable au véhicule et à son usage.</p></div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Ouestpower — Tous droits réservés.</span><span>Nord Vendée • Loire-Atlantique</span><span><a href="mailto:Ouestpower85@gmail.com">Contact</a></span></div></footer>
+<a class="btn mobile-cta" href="#contact">Demander un devis</a>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = new FormData(e.currentTarget);
+    const body = [
+      'Bonjour Ouestpower,',
+      '',
+      'Je souhaite un devis.',
+      'Nom : ' + (f.get('nom') || ''),
+      'Contact : ' + (f.get('retour') || ''),
+      'Véhicule : ' + (f.get('vehicule') || ''),
+      'Prestation : ' + (f.get('prestation') || ''),
+      'Détails : ' + (f.get('message') || ''),
+      '',
+      'Merci.'
+    ].join('\\n');
+    window.location.href = 'mailto:Ouestpower85@gmail.com?subject=' + encodeURIComponent('Demande de devis Ouestpower') + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
