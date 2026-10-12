@@ -1,15 +1,19 @@
-OU ESTPOWER — SITE WEB
+OUESTPOWER — SITE INTERNET COMPLET
 
-Publication : téléverser le contenu du dossier dans le dépôt GitHub Pages, en conservant le dossier assets.
+Contenu :
+- index.html : page principale du site
+- style.css : design responsive sombre et orange
+- script.js : menu mobile et formulaire de demande de devis
+- assets/citroen-c1.jpg : photo fournie, utilisée à la place des anciennes photos
 
-Modifier les photos simplement :
-- Photo principale et réalisation BMW Série 5 E60 : remplacer assets/bmw-serie-5-e60.jpg par la nouvelle photo en gardant exactement ce nom.
-- Renault Master : assets/renault-master.jpg
-- Citroën C1 : assets/citroen-c1.jpg
-- Renault Captur : assets/renault-captur-09-tce.jpg
-- Renault Trafic : assets/renault-trafic-2.jpg
-- Camping-car : assets/camping-car-ford-tdci.jpg
+Publication GitHub Pages :
+1. Décompressez le ZIP sur votre ordinateur.
+2. Dans le dépôt GitHub ouestpower-site, téléversez index.html, style.css, script.js et le dossier assets (avec le fichier citroen-c1.jpg).
+3. Remplacez les anciens fichiers quand GitHub le demande.
+4. Cliquez sur Commit changes.
+5. Attendez quelques minutes puis actualisez https://ouestpower85.github.io/ouestpower-site/
 
-Pour une nouvelle photo BMW, garder le nom bmw-serie-5-e60.jpg évite de modifier le code HTML.
-Les estimations de puissance Stage 1 sont des fourchettes générales indicatives, pas une garantie. Toujours vérifier la motorisation exacte et l'état mécanique avant toute annonce client.
-Contacts : 06 59 20 91 42 — ouestpower85@gmail.com — Instagram @ouestpower.
+Important :
+- Le formulaire prépare un message et propose de le copier puis d'ouvrir Instagram ; il n'envoie pas automatiquement de message.
+- Les prix affichés sont « à partir de 450 € ».
+- Vérifiez et complétez les mentions légales, coordonnées, conditions et informations réglementaires avant une utilisation commerciale.
