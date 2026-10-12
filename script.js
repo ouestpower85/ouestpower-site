@@ -353,29 +353,55 @@
   }
 
   function refreshModels() {
-    if (!makeSelect || !modelSelect || !engineSelect) return;
-    const make = makeSelect.value;
-    fillSelect(modelSelect, "Choisir un modèle", make && vehicleDB[make] ? Object.keys(vehicleDB[make]) : []);
-    fillSelect(engineSelect, "Choisir une motorisation", []);
-    if (resultBox) resultBox.innerHTML = "Sélectionnez une marque, un modèle et une motorisation pour afficher une estimation.";
-  }
+  if (!makeSelect || !modelSelect || !engineSelect) return;
 
-  function refreshEngines() {
-    if (!makeSelect || !modelSelect || !engineSelect) return;
-    const engines = vehicleDB[makeSelect.value]?.[modelSelect.value] || [];
-    engineSelect.innerHTML = "";
-    const first = document.createElement("option");
-    first.value = "";
-    first.textContent = "Choisir une motorisation";
-    engineSelect.appendChild(first);
-    engines.forEach((engine, index) => {
-      const option = document.createElement("option");
-      option.value = String(index);
-      option.textContent = engine.label;
-      engineSelect.appendChild(option);
-    });
-    if (resultBox) resultBox.innerHTML = "Choisissez une motorisation puis cliquez sur « Estimer les gains ».";
+  const make = makeSelect.value;
+  const models = vehicleDB[make] || {};
+
+  fillSelect(
+    modelSelect,
+    "Choisir un modèle",
+    Object.keys(models)
+  );
+
+  fillSelect(
+    engineSelect,
+    "Choisir une motorisation",
+    []
+  );
+
+  if (resultBox) {
+    resultBox.textContent =
+      "Sélectionnez un modèle et une motorisation pour afficher une estimation.";
   }
+}
+
+function refreshEngines() {
+  if (!makeSelect || !modelSelect || !engineSelect) return;
+
+  const make = makeSelect.value;
+  const model = modelSelect.value;
+  const engines = vehicleDB[make]?.[model] || [];
+
+  engineSelect.innerHTML = "";
+
+  const first = document.createElement("option");
+  first.value = "";
+  first.textContent = "Choisir une motorisation";
+  engineSelect.appendChild(first);
+
+  engines.forEach((engine, index) => {
+    const option = document.createElement("option");
+    option.value = String(index);
+    option.textContent = engine.label;
+    engineSelect.appendChild(option);
+  });
+
+  if (resultBox) {
+    resultBox.textContent =
+      "Choisissez une motorisation puis cliquez sur « Estimer les gains ».";
+  }
+}
 
   if (makeSelect && modelSelect && engineSelect) {
     fillSelect(makeSelect, "Choisir une marque", Object.keys(vehicleDB));
